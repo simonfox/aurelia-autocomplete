@@ -12,12 +12,9 @@ let nextID = 0;
 export class Autocomplete {
   @bindable controller;
   @bindable({ defaultBindingMode: bindingMode.twoWay }) value;
-  @bindable title = '';
   @bindable placeholder = '';
   @bindable disabled = false;
   @bindable delay = 300;
-  @bindable small = false;
-  @bindable horizontal = false;
   @observable inputValue = '';
 
   id = nextID++;
