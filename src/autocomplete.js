@@ -163,7 +163,7 @@ export class Autocomplete {
 
   blur() {
     this.select(this.value);
-    this.taskQueue.queueMicroTask(() => this.element.dispatchEvent(DOM.createCustomEvent('blur')));
+    this.taskQueue.queueMicroTask(() => this.element.dispatchEvent(DOM.createCustomEvent("blur", { bubbles: true })));
   }
 
   suggestionClicked(suggestion) {
